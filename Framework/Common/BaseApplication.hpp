@@ -1,0 +1,17 @@
+#pragma once
+#include "IApplication.hpp"
+
+namespace My{
+	class BaseApplication:implements IApplication
+	{
+	public:
+		virtual int Initialize();
+		virtual void Finalize();
+		virtual void Tick();
+		virtual bool IsQuit();
+	
+	protected:
+		//flag if need quit main loop of the application
+		bool m_bQuit;
+	};
+}
