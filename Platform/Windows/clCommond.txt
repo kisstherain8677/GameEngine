@@ -1,3 +1,8 @@
 #type this in visual studio prompt,then cl compiler will generate obj and exe file.
 
 cl user32.lib gdi32.lib helloengine_win.c
+
+#debug:
+cl -o helloengine_d2d.obj helloengine_d2d.cpp
+link -debug user32.lib ole32.lib d2d1.lib helloengine_d2d.obj
+devenv /debug helloengine_d2d.exe
