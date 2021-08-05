@@ -1,8 +1,2 @@
-
-#编译shader文件
-fxc /T vs_5_0 /Zi /Fo copy.vso copy.vs
-fxc /T ps_5_0 /Zi /Fo copy.pso copy.ps
-
 #用cl编译生成目标文件和可执行文件
-
-cl -I./DirectXMath/Inc -l user32.lib -l d3d11.lib -l d3dcompiler.lib helloengine_d3d.cpp
+cl /EHsc helloengine_d3d12.cpp user32.lib d3d12.lib dxgi.lib d3dcompiler.lib
